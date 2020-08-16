@@ -1,0 +1,127 @@
+private void LblChosenLetters_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+            
+
+        
+
+        private void LblGuessWord_Click(object sender, EventArgs e)
+        {
+            {
+                string[] listwords = new string[20];
+                listwords[0] = "sheep";
+                listwords[1] = "goat";
+                listwords[2] = "computer";
+                listwords[3] = "elephant";
+                listwords[4] = "giraff";
+                listwords[5] = "america";
+                listwords[6] = "watermellon";
+                listwords[7] = "icecream";
+                listwords[8] = "jasmine";
+                listwords[9] = "pinapple";
+                listwords[10] = "orange";
+                listwords[11] = "mango";
+                listwords[12] = "chicken";
+                listwords[13] = "turkey";
+                listwords[14] = "beans";
+                listwords[15] = "potatoes";
+                listwords[16] = "sharp";
+                listwords[17] = "needle";
+                listwords[18] = "clothing";
+                listwords[19] = "vacation";
+
+                Random randGen = new Random();
+                var idx = randGen.Next(0, 19);
+                string mysteryWord = listwords[idx];
+                char[] guess = new char[mysteryWord.Length];
+                
+
+                for (int p = 0; p < mysteryWord.Length; p++)
+                    guess[p] = '*';
+
+                while (true)
+                {
+                    
+                    for (int j = 0; j < mysteryWord.Length; j++)
+                    {
+                        char v = InputBox("Guess the correct letter.", "Guess Letter");
+                        string playerGuess = v;
+                        
+                        if (playerGuess == mysteryWord[j])
+                            guess[j] = playerGuess;
+                    }
+                    Console.WriteLine(guess);
+
+                }
+            }
+        }
+
+        
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            
+
+            //Random randGen = new Random();
+            //var idx = randGen.Next(0, 19);
+            //string mysteryWord = listwords[idx];
+            ////char[] guess = new char[mysteryWord.Length]; 
+            //string guess = txtInput.Text;
+        }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+            string[] listwords = new string[20];
+            listwords[0] = "sheep";
+            listwords[1] = "goat";
+            listwords[2] = "computer";
+            listwords[3] = "elephant";
+            listwords[4] = "giraff";
+            listwords[5] = "america";
+            listwords[6] = "watermellon";
+            listwords[7] = "icecream";
+            listwords[8] = "jasmine";
+            listwords[9] = "pinapple";
+            listwords[10] = "orange";
+            listwords[11] = "mango";
+            listwords[12] = "chicken";
+            listwords[13] = "turkey";
+            listwords[14] = "beans";
+            listwords[15] = "potatoes";
+            listwords[16] = "sharp";
+            listwords[17] = "needle";
+            listwords[18] = "clothing";
+            listwords[19] = "vacation";
+
+            Random randGen = new Random();
+            var idx = randGen.Next(0, 19);
+            string mysteryWord = listwords[idx];
+            //char[] guess = new char[mysteryWord.Length]; 
+            string guess = txtInput.Text;
+
+            //for (int p = 0; p < mysteryWord.Length; p++)
+            //    guess[p] = '*';
+
+            //while (true)
+            //{
+
+            //    for (int j = 0; j < mysteryWord.Length; j++)
+            //    {
+            //        char v = InputBox("Guess the correct letter.", "Guess Letter");
+            //        string playerGuess = v;
+
+            //        if (playerGuess == mysteryWord[j])
+            //            guess[j] = playerGuess;
+            //    }
+            //    Console.WriteLine(guess);
+
+            //}
+        }
